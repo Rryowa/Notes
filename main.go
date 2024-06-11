@@ -14,6 +14,8 @@ type CLI struct {
 	sem            chan struct{}
 }
 
+//***How to DYNAMICALLY change num of goroutines running in paraller***
+
 // NOTE: IF USE (c *CLI) receiver, 'c.sem <- struct{}' will cause a deadlock, after changing max!
 // NOTE: channels passed by reference.
 // NOTE: if you use make, new or &, you can pass it to another function without copying the underlying data.
